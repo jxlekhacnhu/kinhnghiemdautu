@@ -34,6 +34,15 @@
       margin: 0;
       padding: 10px 20px;
       z-index: 2;
+      white-space: nowrap;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .banner h1 {
+        font-size: 24px;
+      }
     }
 
     .avatar {
@@ -52,7 +61,7 @@
     }
 
     .content {
-      padding: 80px 20px 40px; /* tăng padding-top để tránh che avatar */
+      padding: 80px 20px 40px;
       max-width: 900px;
       margin: auto;
     }
@@ -82,9 +91,9 @@
 <body>
 
   <div class="banner">
-    <img src="investment-banner-1440x720.jpg" alt="Banner" class="banner-img" />
+    <img src="https://kinhnghiemdautu.com/investment-banner-1440x720.jpg" alt="Banner" class="banner-img" />
     <h1>Kinh Nghiệm Đầu Tư</h1>
-    <img src="avatar.jpg" alt="Avatar của bạn" class="avatar" />
+    <img src="https://kinhnghiemdautu.com/avatar.jpg" alt="Avatar của bạn" class="avatar" />
   </div>
 
   <div class="content">
