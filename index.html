@@ -7,59 +7,26 @@
     <meta name="author" content="Lê Khắc Nhu" />
     <title>Kinh Nghiệm Đầu Tư</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      .fade-in {
-        animation: fadeInUp 1s ease-out forwards;
-        opacity: 0;
-      }
-      .zoom-in {
-        animation: zoomIn 1s ease-out forwards;
-        opacity: 0;
-      }
-      @keyframes fadeInUp {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes zoomIn {
-        0% {
-          opacity: 0;
-          transform: scale(0.8);
-        }
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-    </style>
   </head>
   <body class="bg-[#0a0f2c] text-white">
     <!-- Banner -->
     <div class="relative">
       <img
-        src="https://kinhnghiemdautu.com/investment-banner-1440x720.jpg"
+        src="https://kinhnghiemdautu.com/kinhnghiemdautu-banner.webp"
         alt="Banner đầu tư tài chính"
         class="w-full h-auto object-cover max-h-[60vh] sm:max-h-[75vh] fade-in"
+        loading="lazy"
       />
-    </div>
-
-    <!-- Mô tả -->
-    <div class="relative z-10 -mt-12 sm:-mt-20 px-4 sm:px-6 fade-in">
       <div
-        class="bg-[#0a0f2ce6] p-4 rounded-xl flex flex-row items-center max-w-5xl mx-auto shadow-lg text-white zoom-in"
+        class="absolute bottom-2 left-2 sm:bottom-6 sm:left-6 bg-[#0a0f2ce6] p-4 rounded-xl flex flex-col sm:flex-row items-start sm:items-center max-w-[95%] sm:max-w-[80%] shadow-lg text-white"
       >
         <img
-          src="https://kinhnghiemdautu.com/avatar.jpg"
+          src="https://kinhnghiemdautu.com/kinhnghiemdautu-avatar.webp"
           alt="Ảnh đại diện Lê Khắc Nhu"
           loading="lazy"
           class="w-20 h-20 sm:w-28 sm:h-28 rounded-full border-4 border-white object-cover bg-white shrink-0"
         />
-        <div class="ml-4 text-left overflow-hidden flex-1">
+        <div class="ml-0 sm:ml-4 mt-3 sm:mt-0 text-left overflow-hidden">
           <h2 class="text-base sm:text-xl text-[#00ffc3] font-semibold">Lê Khắc Nhu</h2>
           <p class="text-xs sm:text-base mt-1 leading-snug sm:leading-normal text-white/90">
             Nhà đầu tư chuyên nghiệp trong thị trường chứng khoán, crypto và
@@ -72,7 +39,7 @@
 
     <!-- Nội dung chiến lược -->
     <main class="max-w-4xl mx-auto px-4 py-12 sm:py-16 space-y-12">
-      <section class="fade-in">
+      <section>
         <h2 class="text-xl sm:text-2xl text-[#00ffc3] font-semibold mb-3">Đầu tư chứng khoán</h2>
         <p class="text-sm sm:text-base leading-relaxed text-gray-100">
           Tập trung vào cổ phiếu bluechip, sử dụng phân tích kỹ thuật EMA và
@@ -81,7 +48,7 @@
         </p>
       </section>
 
-      <section class="fade-in">
+      <section>
         <h2 class="text-xl sm:text-2xl text-[#00ffc3] font-semibold mb-3">Đầu tư Crypto</h2>
         <p class="text-sm sm:text-base leading-relaxed text-gray-100">
           Giao dịch trên các sàn DEX và CEX, sử dụng chiến lược bắt đáy và chốt
@@ -90,7 +57,7 @@
         </p>
       </section>
 
-      <section class="fade-in">
+      <section>
         <h2 class="text-xl sm:text-2xl text-[#00ffc3] font-semibold mb-3">Đầu tư Forex</h2>
         <p class="text-sm sm:text-base leading-relaxed text-gray-100">
           Sử dụng EA tự động với chiến lược SnowBall và Trailing Stop. Tập trung
