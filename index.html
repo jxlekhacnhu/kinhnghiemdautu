@@ -25,16 +25,17 @@
       100% { opacity: 1; transform: scale(1); }
     }
 
+    /* Coin rơi từ trên xuống */
     .money-float {
       position: absolute;
-      bottom: -50px;
+      top: -50px;
       width: 32px;
       height: 32px;
-      animation: floatUp 14s linear infinite;
+      animation: floatDown 15s linear infinite;
       opacity: 0.8;
     }
 
-    @keyframes floatUp {
+    @keyframes floatDown {
       0% {
         transform: translateY(0) scale(1) rotate(0deg);
         opacity: 0.8;
@@ -43,7 +44,7 @@
         opacity: 1;
       }
       100% {
-        transform: translateY(-120vh) scale(1.2) rotate(360deg);
+        transform: translateY(120vh) scale(1.2) rotate(360deg);
         opacity: 0;
       }
     }
@@ -53,20 +54,19 @@
 
   <!-- Banner -->
   <div class="relative overflow-hidden">
-    <!-- Ảnh nền -->
     <img
       src="https://kinhnghiemdautu.com/investment-banner-1440x720.jpg"
       alt="Banner đầu tư tài chính"
       class="w-full h-auto object-cover max-h-[60vh] sm:max-h-[75vh] fade-in"
     />
 
-    <!-- Vùng chứa hiệu ứng đồng xu bay -->
+    <!-- Coin container -->
     <div class="absolute inset-0 pointer-events-none z-10" id="coin-container"></div>
   </div>
 
   <!-- Mô tả -->
   <div class="relative z-10 -mt-12 sm:-mt-20 px-4 sm:px-6 fade-in">
-    <div class="bg-[#0a0f2c99] p-4 rounded-xl flex flex-row items-center max-w-5xl mx-auto shadow-lg text-white zoom-in space-x-4">
+    <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl flex flex-row items-center max-w-5xl mx-auto shadow-lg text-white zoom-in space-x-4">
       <img
         src="https://kinhnghiemdautu.com/avatar.jpg"
         alt="Ảnh đại diện Lê Khắc Nhu"
@@ -76,13 +76,13 @@
       <div class="text-left overflow-hidden">
         <h2 class="text-base sm:text-xl text-[#00ffc3] font-semibold">Lê Khắc Nhu</h2>
         <p class="text-xs sm:text-base mt-1 leading-snug sm:leading-normal text-white/90">
-          Nhà đầu tư chuyên nghiệp trong thị trường chứng khoán, crypto và forex. Luôn tìm kiếm cơ hội dài hạn và sử dụng sức mạnh lãi kép để tối ưu lợi nhuận.
+          "Tôi luôn tìm kiếm cơ hội đầu tư dài hạn và sử dụng lãi kép để tối ưu hóa lợi nhuận."
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Nội dung chiến lược -->
+  <!-- Nội dung -->
   <main class="max-w-4xl mx-auto px-4 py-12 sm:py-16 space-y-12">
     <section class="fade-in">
       <h2 class="text-xl sm:text-2xl text-[#00ffc3] font-semibold mb-3">Đầu tư chứng khoán</h2>
@@ -111,22 +111,20 @@
     © 2025 Lê Khắc Nhu - Kinh Nghiệm Đầu Tư
   </footer>
 
-  <!-- JavaScript để sinh hiệu ứng coin -->
+  <!-- JavaScript tạo coin tự động -->
   <script>
     const container = document.getElementById('coin-container');
-    const numberOfCoins = 20;
+    const numberOfCoins = 25;
 
     for (let i = 0; i < numberOfCoins; i++) {
       const coin = document.createElement('img');
       coin.src = "https://kinhnghiemdautu.com/money.png";
       coin.className = "money-float";
-      
-      // Random vị trí trái từ 0% đến 95%
-      const left = Math.floor(Math.random() * 96);
+
+      const left = Math.floor(Math.random() * 95);
       coin.style.left = `${left}%`;
 
-      // Random delay từ 0 đến 12s
-      const delay = Math.floor(Math.random() * 12);
+      const delay = Math.random() * 10;
       coin.style.animationDelay = `${delay}s`;
 
       container.appendChild(coin);
